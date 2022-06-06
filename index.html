@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="./cloud.js"></script>
+<title>Nube de refranes - Alberto Crespo</title>
+<!--link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css"-->
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+
+function init() {
+    var w = Math.max(window.innerWidth, document.body.clientWidth), h = Math.max(window.innerHeight, document.body.clientHeight);
+    var clouder = document.getElementById('clouder');
+    var clouder2 = document.getElementById('clouder2');
+    var clouder3 = document.getElementById('clouder3');
+    var clouder4 = document.getElementById('clouder4');
+    var clouder5 = document.getElementById('clouder5');
+
+    /*clouder.style.border = "1px solid black";
+    clouder.style.width = asPixels(w * 2 / 3);
+    clouder.style.height = asPixels(h * 2 / 3);
+    clouder.style.position = "relative";
+    clouder.style.left = asPixels(w / 6);
+    clouder.style.top = asPixels(h / 6);
+    clouder.style.border = "1px solid black";*/
+    clouder.style.width = asPixels(w);
+    clouder.style.height = asPixels(h);
+    
+    clouder2.style.width = asPixels(w);
+    clouder2.style.height = asPixels(h);
+    
+        clouder3.style.width = asPixels(w);
+    clouder3.style.height = asPixels(h);
+    
+        clouder4.style.width = asPixels(w);
+    clouder4.style.height = asPixels(h);
+    
+        clouder5.style.width = asPixels(w);
+    clouder5.style.height = asPixels(h);
+    
+    window.clouder = new Clouder({
+        container: clouder,
+        tags: createTags()
+    });
+    window.clouder2 = new Clouder({
+        container: clouder2,
+        tags2: createTags2()
+    });
+    
+        window.clouder3 = new Clouder({
+        container: clouder3,
+        tags3: createTags3()
+    });
+    
+        window.clouder4 = new Clouder({
+        container: clouder4,
+        tags4: createTags4()
+    });
+    
+        window.clouder5 = new Clouder({
+        container: clouder5,
+        tags5: createTags5()
+    });
+} // init
+
+function createTags() {
+    var elems = [];
+  
+    elems.push({text: "Año de nieves, año de bienes.", id: "0101", weight: 0.1, mes: "enero"});
+    elems.push({text: "Si en enero hace verano <br> no habrá paja ni grano.", id: "0102", weight: 0.1, mes: "enero"});
+    elems.push({text: "Tantos ajos pasan de enero,<br> tantos ajos pierde el ajero.", id: "0103", weight: 0.1, mes: "enero"});
+    elems.push({text: "En enero el suelo mojado, bueno para el suelo, <br> malo para el grano.", id: "0104", weight: 0.1, mes: "enero"});
+    elems.push({text: "Quien caba en enero y poda en febrero,<br> tiene un año libero.", id: "0105", weight: 0.1, mes: "enero"});
+    elems.push({text: "No hay mayor desprecio que no hacer aprecio", id: "0106", weight: 0.1, mes: "enero"});
+    elems.push({text: "En enero le busca la gata al gato el granero.", id: "0107", weight: 0.1, mes: "enero"});
+    elems.push({text: "Seco enero abundante granero.", id: "0108", weight: 0.1, mes: "enero"});
+    elems.push({text: "La flor de enero no llega al frutero. ", id: "0109", weight: 0.1, mes: "enero"});
+    elems.push({text: "En enero mete obrero, mejor a últimos que a primeros.", id: "0110", weight: 0.5, mes: "enero"});
+    elems.push({text: "A quien madruga, Dios le ayuda", id: "0111", weight: 0.5, mes: "enero"});
+    elems.push({text: "Enero caliente el diablo trae en el vientre.", id: "0112", weight: 0.5, mes: "enero"});
+    elems.push({text: "En las mañanas de enero <br> ni se dan los buenos días, ni se quita el sobrero.", id: "0113", weight: 0.5, mes: "enero"});
+    
+    elems.push({text: "Cuando la candelaria implora el invierno está fora,<br> si no implora, ni dentro ni fora.", id: "0201", weight: 0.5, mes: "febrero"});
+    elems.push({text: "Por San Blas la cigüeña verás <br> y si no la vieres año de nieves", id: "0202", weight: 0.5, mes: "febrero"});
+    elems.push({text: "Haciendo pruebas y tal", id: "0203", weight: 0.5, mes: "febrero"});
+    elems.push({text: "Arbol que podo en febrero <br> tendrá fruto durarero", id: "0204", weight: 0.5, mes: "febrero"});
+    elems.push({text: "Flor de febrero no va al granero.", id: "0205", weight: 0.5, mes: "febrero"});
+    elems.push({text: "Cuando el grajo vuela bajo <br> hace un frio del carajo.", id: "0206", weight: 1.0, mes: "febrero"});
+    elems.push({text: "Febrero, frio o templado, pásalo arropado.", id: "0207", weight: 1.0, mes: "febrero"});
+    elems.push({text: "Febrerico el corto,<br> un día peor que otro.", id: "0208", weight: 1.0, mes: "febrero"});
+    elems.push({text: "Febrero y las mujeres, <br> tienen distintos pareceres.", id: "0209", weight: 1.0, mes: "febrero"});
+    elems.push({text: "En febrero busca la sombra el perro, y en marzo el perro y el amo.", id: "0210", weight: 1.0, mes: "febrero"});
+    elems.push({text: "Por San Blas la cigüeña verás <br> y si no la vieres, año de nieves.", id: "0211", weight: 1.0, mes: "febrero"});
+    elems.push({text: "San Matías iguala las noches con los días.", id: "0212", weight: 1.0, mes: "febrero"});
+    elems.push({text: "Febrero el mocho, si no tiene 27, tiene 28.", id: "0213", weight: 1.0, mes: "febrero"});
+    elems.push({text: "Lluvia en febrero, cada gota vale un dinero", id: "0214", weight: 1.0, mes: "febrero"});
+    elems.push({text: "Febrerín el mas corto y el mas ruín", id: "0215", weight: 0.1, mes: "febrero"});
+    
+    elems.push({text: "Cuando marzo mayea, mayo marcea.", id: "0301", weight: 0.1, mes: "marzo"});
+    elems.push({text: "Marzo ventoso abril lluvioso <br> dejan a mayo florido y hermoso.", id: "0302", weight: 0.1, mes: "marzo"});
+    elems.push({text: "Si truena en marzo, <br> coge la azada y el mazo.", id: "0303", weight: 0.1, mes: "marzo"});
+    elems.push({text: "En marzo siembra el garbanzo.", id: "0304", weight: 0.1, mes: "marzo"});
+    elems.push({text: "Nieve en marzo vale un dinerazo.", id: "0305", weight: 0.1, mes: "marzo"});
+    elems.push({text: "En marzo la veleta, ni dos horas quieta.", id: "0306", weight: 0.1, mes: "marzo"});
+    elems.push({text: "Nieves antes de marzo, oro blanco", id: "0307", weight: 0.1, mes: "marzo"});
+    elems.push({text: "Quien sanjuanea marcea.", id: "0308", weight: 0.1, mes: "marzo"});
+    elems.push({text: "Si en marzo mayea en mayo marcea.", id: "0308", weight: 1.0, mes: "marzo"});
+    return elems;
+}
+function createTags2() {
+    var elems = [];   
+    elems.push({text: "En abril aguas mil", id: "0401", weight: 0.5, mes: "abril"});
+    elems.push({text: "Abril que truena, cosecha buena", id: "0402", weight: 0.5, mes: "abril"});
+    elems.push({text: "Si truena en abril <br> coge la media y el calcetín.", id: "0403", weight: 0.5, mes: "abril"});
+    elems.push({text: "Si no hubiese mes de abril,<br> no habría año ruin.", id: "0404", weight: 0.5, mes: "abril"});
+    elems.push({text: "Abril frio, mucho pan y poco vino.", id: "0405", weight: 1.0, mes: "abril"});
+    elems.push({text: "Abril es hijo de una puta y un aguacil.", id: "0407", weight: 1.0, mes: "abril"});
+    elems.push({text: "Con la luna de abril tardía,<br> ningún labrador confía", id: "0408", weight: 1.0, mes: "abril"});
+    elems.push({text: "Abril, abril,<br> en 100 años deberías de venir.", id: "0409", weight: 1.0, mes: "abril"});
+    elems.push({text: "Truenos en abril,<br> prepara la media y el calcetín.", id: "0410", weight: 1.0, mes: "abril"});
+    elems.push({text: "Abril pulidito de mi venía.", id: "0411", weight: 1.0, mes: "abril"});
+    elems.push({text: "Violetas en primavera,<br> buen invierno nos espera.", id: "0412", weight: 1.0, mes: "abril"});
+    elems.push({text: "Lluvia de primavera alegra la cartera.", id: "0413", weight: 1.0, mes: "abril"});
+    elems.push({text: "Las mañanitas de abril son muy dulces de dormir <br> y las de mayo  no tienen fin ni cabo", id: "0414", weight: 1.0, mes: "abril"});
+    elems.push({text: "Espárragos de abril para mi, los de mayo para mi hermano, los junio para ninguno.", id: "0414", weight: 1.0, mes: "abril"});
+    
+    elems.push({text: "Con el agua de mayo crece el tallo", id: "0501", weight: 0.5, mes: "mayo"});
+    elems.push({text: "Agua de mayo, pan para todo el año", id: "0502", weight: 0.5, mes: "mayo"});
+    elems.push({text: "Siembra perejil en mayo y lo tendrás todo el año.", id: "0503", weight: 0.5, mes: "mayo"});
+    elems.push({text: "Lo que mayo riega, mayo seca.", id: "0504", weight: 0.5, mes: "mayo"});
+    elems.push({text: "Por San Gregorio, la pipa en el hoyo", id: "0505", weight: 1.0, mes: "mayo"});
+    elems.push({text: "Mayo hace el trigo y agosto hace el mosto.", id: "0506", weight: 1.0, mes: "mayo"});
+    elems.push({text: "Lo que hace en San Matías, lo hace después cuarenta días.", id: "0507", weight: 1.0, mes: "mayo"});
+    elems.push({text: "En Santa Quiteria, si se hielan las viñas, Santa de mierda.", id: "0508", weight: 1.0, mes: "mayo"});
+    elems.push({text: "Si en marzo mayea en mayo marcea.", id: "0509", weight: 1.0, mes: "mayo"});
+    elems.push({text: "En mayo, con las flores en la mano", id: "0510", weight: 1.0, mes: "mayo"});
+    elems.push({text: "Si tienes pan para mayo y leña para abril , échate a dormir.", id: "0512", weight: 1.0, mes: "mayo"});
+    elems.push({text: "Mayo hace el trigo y agosto hace el mosto.", id: "0513", weight: 1.0, mes: "mayo"});
+    return elems;
+}
+function createTags3() {
+    var elems = [];        
+  
+    elems.push({text: "Agua de San Juan, quita vino y no da pan.", id: "0602", weight: 0.5, mes: "junio"});
+    elems.push({text: "Aguas por San Juan quita acéite, vino y pan.", id: "0603", weight: 0.5, mes: "junio"});
+    elems.push({text: "Sembrarás cuando podrás pero por San Juan segarás.", id: "0604", weight: 0.5, mes: "junio"});
+    elems.push({text: "El que Sanjuanea Marcéa.", id: "0605", weight: 1.0, mes: "junio"});
+    elems.push({text: "Hasta San Juan no te quites el gabán.", id: "0606", weight: 1.0, mes: "junio"});
+    elems.push({text: "Beber vino en bota, aunque se beba mucho, no se nota.", id: "0607", weight: 1.0, mes: "junio"});
+    elems.push({text: "Agua en San Juan quita vino y no da pan.", id: "0608", weight: 1.0, mes: "junio"});
+    elems.push({text: "Junio soleado y brillante pone de buen talante.", id: "0609", weight: 1.0, mes: "junio"});
+    elems.push({text: "Hasta el 40 de mayo no te quites el sayo", id: "0610", weight: 1.0, mes: "junio"});
+
+    
+    elems.push({text: "El que en julio no trilla, en agosto no agavilla.", id: "0701", weight: 0.5, mes: "julio"});
+    elems.push({text: "ADice el labrador al trigo, para julio te espero amigo.", id: "0702", weight: 0.5, mes: "julio"});
+    elems.push({text: "Si llueve por Santa Ana, llueve un mes y una semana.", id: "0703", weight: 0.5, mes: "julio"});
+    elems.push({text: "Julio caliente quema al mas valiente.", id: "0704", weight: 0.5, mes: "julio"});
+    elems.push({text: "Para San Pedro se arranca el ajo y se siembra el puerro.", id: "0705", weight: 1.0, mes: "julio"});
+    elems.push({text: "El verano en Soria dura de Santiago a Santa Ana.", id: "0707", weight: 1.0, mes: "julio"});
+    elems.push({text: "Un julio normal seca todo manantial.", id: "0708", weight: 1.0, mes: "julio"});
+    elems.push({text: "Si en julio no truena, hambre en la aldea.", id: "0709", weight: 1.0, mes: "julio"});
+    
+    elems.push({text: "Quien en agosto ara, riqueza prepara.", id: "0801", weight: 0.5, mes: "agosto"});
+    elems.push({text: "Si llueve en agosto, frio en el rostro.", id: "0802", weight: 0.5, mes: "agosto"});
+    elems.push({text: "Lo que agosto madura, septiembre asegura.", id: "0803", weight: 0.5, mes: "agosto"});
+    elems.push({text: "Tormentas en agosto, buenos racimos y mejor mosto", id: "0804", weight: 0.5, mes: "agosto"});
+    elems.push({text: "Cuando vas al campo, al que te acuestes, una serpiente, agua al dia siguiente.", id: "0805", weight: 1.0, mes: "agosto"});
+    elems.push({text: "Mayo hace el trigo y agosto hace el mosto.", id: "0806", weight: 1.0, mes: "agosto"});
+    elems.push({text: "En agosto llueve miel y mosto.", id: "0807", weight: 1.0, mes: "agosto"});
+    elems.push({text: "En agosto con las pajas en el rostro.", id: "0808", weight: 1.0, mes: "agosto"});
+    return elems;
+}
+function createTags4() {
+    var elems = [];
+    elems.push({text: "El mes de las tres Pes: pan, patatas y pimientos.", id: "0901", weight: 0.5, mes: "septiembre"});
+    elems.push({text: "Dice el labrador al trigo, para julio te espero amigo.", id: "0902", weight: 0.5, mes: "septiembre"});
+    elems.push({text: "La lluvia de septiembre es buena para las uñas y mejor para las siembras.", id: "0903", weight: 0.5, mes: "septiembre"});
+    elems.push({text: "En septiembre cosecha y no siembres.", id: "0904", weight: 0.5, mes: "septiembre"});
+    elems.push({text: "De higos a brevas.", id: "0905", weight: 1.0, mes: "septiembre"});
+    elems.push({text: "La lluvia de septiembre manan las fuentes.", id: "0906", weight: 1.0, mes: "septiembre"});
+    elems.push({text: "En septiembre o se secan los puentes <br> o se llevan los puentes.", id: "0907", weight: 1.0, mes: "septiembre"});
+    elems.push({text: "Septiembre es frutero, alegre y fiestero.", id: "0908", weight: 1.0, mes: "septiembre"});
+    elems.push({text: "En septiembre el que no tenga ropa que tiemble.", id: "0909", weight: 1.0, mes: "septiembre"});
+    elems.push({text: "Si sembrar quieres, hasta San Vicente no sudes la frente.", id: "0910", weight: 1.0, mes: "septiembre"});
+    
+    elems.push({text: "La luna de octubre siete lunas cubre.", id: "1001", weight: 0.5, mes: "octubre"});
+    elems.push({text: "Si octubre es corto en ganos, sera largo en caldos.", id: "1002", weight: 0.5, mes: "octubre"});
+    elems.push({text: "En octubre no molesta la lumbre.", id: "1003", weight: 0.5, mes: "octubre"});
+    elems.push({text: "Por Santa Teresa, agua en las presas.", id: "1004", weight: 0.5, mes: "octubre"});
+    elems.push({text: "Octubre lluvioso, año copioso.", id: "1005", weight: 1.0, mes: "octubre"});
+    elems.push({text: "Primavera seca, verano lluvioso y otoño desastroso.", id: "1006", weight: 1.0, mes: "octubre"});
+    
+    elems.push({text: "Por los santos la nieve en los cantos.", id: "1101", weight: 0.5, mes: "noviembre"});
+    elems.push({text: "A todo cerdo le llega su San Martín.", id: "1102", weight: 0.5, mes: "noviembre"});
+    elems.push({text: "Bendito mes, empiezas por los santos y acabas por San Andrés.", id: "1103", weight: 0.5, mes: "noviembre"});
+    elems.push({text: "Truenos en noviembre prepara el traje del año que viene.", id: "1104", weight: 0.5, mes: "noviembre"});
+    elems.push({text: "Para San Andrés la nieve en los pies.", id: "1105", weight: 1.0, mes: "noviembre"});
+    elems.push({text: "Por Santa Cecilia nieva hasta la rodilla.", id: "1106", weight: 1.0, mes: "noviembre"});
+    elems.push({text: "Por los Santos nieve en los altos.", id: "1107", weight: 1.0, mes: "noviembre"});
+    
+    elems.push({text: "Cuando en diciembre veas nevar,<br> ensancha el granero y el pajar.", id: "1201", weight: 0.5, mes: "diciembre"});
+    elems.push({text: "En no lloviendo en nochebuena,<br> no hay sementera buena.", id: "1202", weight: 0.5, mes: "diciembre"});
+    elems.push({text: "En diciembre no hay diente que no tiemble.", id: "1203", weight: 0.5, mes: "diciembre"});
+    elems.push({text: "En Santa Lucía alarga la noche <br> y acorta el día un paso de gallina.", id: "1204", weight: 0.5, mes: "diciembre"});
+    elems.push({text: "Ya lo dijo el maño.<br> El 31 de diciembre se acaba el año.", id: "1205", weight: 1.0, mes: "diciembre"});
+    elems.push({text: "En diciembre, diente con diente..", id: "1206", weight: 1.0, mes: "diciembre"});
+    elems.push({text: "Ni en agosto caminar ni en diciembre navegar.", id: "1207", weight: 1.0, mes: "diciembre"});
+
+    return elems;
+} // createTags
+
+    function createTags5() {
+    var elems2 = [];
+    elems2.push({text: "ENERO", id: "enero", weight: 0.1, mes: "mes"});
+    elems2.push({text: "FEBRERO", id: "febrero", weight: 0.1, mes: "mes"});
+    elems2.push({text: "MARZO", id: "marzo", weight: 0.1, mes: "mes"});
+    elems2.push({text: "ABRIL", id: "abril", weight: 0.1, mes: "mes"});
+    elems2.push({text: "MAYO", id: "mayo", weight: 0.1, mes: "mes"});
+    elems2.push({text: "JUNIO", id: "junio", weight: 0.1, mes: "mes"});
+    elems2.push({text: "JULIO", id: "julio", weight: 0.1, mes: "mes"});
+    elems2.push({text: "AGOSTO", id: "agosto", weight: 0.1, mes: "mes"});
+    elems2.push({text: "SEPTIEMBRE", id: "septiembre", weight: 0.1, mes: "mes"});
+    elems2.push({text: "OCTUBRE", id: "octubre", weight: 0.5, mes: "mes"});
+    elems2.push({text: "NOVIEMBRE", id: "noviembre", weight: 0.5, mes: "mes"});
+    elems2.push({text: "DICIEMBRE", id: "diciembre", weight: 0.5, mes: "mes"});
+    return elems2;
+    }
+</script>
+
+</head>
+
+<body onLoad="init();">
+    <div id="clouder"/>
+    <div id="clouder2"/>
+    <div id="clouder3"/>
+    <div id="clouder4"/>
+    <div id="clouder5"/>
+
+</body>
+</html>

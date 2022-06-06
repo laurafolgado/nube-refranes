@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@font-face {
+  font-family: "Blinker";
+  src: url(fonts/Blinker-Regular.ttf);
+}
+
+
+@font-face {
+  font-family: "Blinker ExtraBold";
+  src: url(fonts/Blinker-ExtraBold.ttf);
+}
+
+div span{
+    font-family: "Blinker", sans-serif;
+    max-width: 300px;
+    color: white;
+    text-align: center;
+}
+
+div span.mes{
+    font-family: "Blinker ExtraBold", sans-serif;
+    color:white;
+}
+
+div#clouder, div#clouder2, div#clouder3, div#clouder4, div#clouder5{
+    position: absolute;
+    /*padding: 20px;*/
+}
+
+/* LAURA: EVITAR QUE SE PUEDA HACER SELECCION DE TEXTO */
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
